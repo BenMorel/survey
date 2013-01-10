@@ -10,5 +10,3 @@ Use either:
 or:
 
     php zip.php http://path/to/archive.zip
-
-

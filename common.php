@@ -72,7 +72,7 @@ class Surveyor
      */
     public function survey($dir)
     {
-        $this->resetPatternCount();
+        $this->resetPatternCounters();
         $this->browse($dir);
 
         return $this->patternCounters;
@@ -105,7 +105,7 @@ class Surveyor
     }
 
     /**
-     * Analyzes a file to look for patterns, and prints the result.
+     * Analyzes a file to look for patterns.
      *
      * @param string $file The path of the file to analyze.
      * @return void
@@ -125,7 +125,7 @@ class Surveyor
      *
      * @return void
      */
-    private function resetPatternCount()
+    private function resetPatternCounters()
     {
         foreach ($this->patterns as $pattern) {
             $this->patternCounters[$pattern] = 0;
